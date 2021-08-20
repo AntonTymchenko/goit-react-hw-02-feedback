@@ -17,21 +17,6 @@ function Buttons({ increaseItems, options }) {
             </button>
           </li>
         ))}
-        {/* <li className={s.items}>
-          <button type="button" className={s.btnsItem} onClick={increaseItems}>
-            Good
-          </button>
-        </li>
-        <li className={s.items}>
-          <button type="button" className={s.btnsItem} onClick={increaseItems}>
-            Neutral
-          </button>
-        </li>
-        <li className={s.items}>
-          <button type="button" className={s.btnsItem} onClick={increaseItems}>
-            Bad
-          </button>
-        </li> */}
       </ul>
     </Panel>
   );
