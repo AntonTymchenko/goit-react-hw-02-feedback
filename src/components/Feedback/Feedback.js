@@ -39,7 +39,14 @@ class Feedback extends Component {
     let persentage = this.countPositiveFeedbackPercentage();
     return (
       <div className={s.container}>
-        <Buttons increaseItems={this.increaseItems} />
+        <Buttons
+          increaseItems={this.increaseItems}
+          options={[
+            { value: "Good", id: "id-1" },
+            { value: "Neutral", id: "id-2" },
+            { value: "Bad", id: "id-3" },
+          ]}
+        />
         <Panel title="Statistics">
           {this.countTotalFeedback() === 0 ? (
             <Notification />

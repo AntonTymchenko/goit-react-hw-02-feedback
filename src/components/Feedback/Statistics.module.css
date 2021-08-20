@@ -10,6 +10,7 @@ ul {
 }
 .btnsItem {
   background-color: transparent;
+  cursor: pointer;
 }
 .btnsItem:active {
   background-color: aquamarine;
