@@ -11,17 +11,10 @@ class Feedback extends Component {
     neutral: 0,
     bad: 0,
   };
-  increaseItems = (event) => {
-    if (event.target.textContent === "Good") {
-      this.setState((prevState) => ({ good: (prevState.good += 1) }));
-    }
-    if (event.target.textContent === "Bad") {
-      this.setState((prevState) => ({ bad: (prevState.bad += 1) }));
-    }
-    if (event.target.textContent === "Neutral") {
-      this.setState((prevState) => ({ neutral: (prevState.neutral += 1) }));
-    }
-    return this.countPositiveFeedbackPercentage();
+  increaseItems = (value) => {
+    this.setState((prevState) => {
+      return { [value.toLowerCase()]: prevState[value.toLowerCase()] + 1 };
+    });
   };
   countTotalFeedback = () => {
     return this.state.good + this.state.bad + this.state.neutral;

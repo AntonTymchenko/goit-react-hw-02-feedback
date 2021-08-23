@@ -11,7 +11,7 @@ function Buttons({ increaseItems, options }) {
             <button
               type="button"
               className={s.btnsItem}
-              onClick={increaseItems}
+              onClick={() => increaseItems(value)}
             >
               {value}
             </button>
